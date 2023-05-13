@@ -1,0 +1,29 @@
+
+<div class="d-flex justify-content-center align-items-center" style="margin-top: 3%;">
+  <div class="input-group rounded">
+    <input type="text" class="form-control " [(ngModel)]="searchText" placeholder="Rechercher" >
+    <div class="input-group-append">
+
+    </div>
+  </div>
+</div>
+
+
+<table class="table table-striped" >
+  <thead>
+    <tr>
+      <th scope="col">matricule</th>
+      <th scope="col">model</th>
+      <th scope="col">action</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let car of cars|car:searchText">
+      <td>{{ car.matricule }}</td>
+      <td>{{ car.model }}</td>
+
+      <td><i class="fa-sharp fa-solid fa-trash" style="color:red;margin-left: 3%;" (click)="delete(car.id)"></i></td>
+
+    </tr>
+  </tbody>
+</table>

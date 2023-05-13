@@ -26,6 +26,10 @@ export class RegisterComponent implements OnInit {
   goLogin(){
     this.router.navigate(["login"])
   }
+  goContact(){
+    this.router.navigate(["/home"])
+
+  }
   onSubmit(){
     console.log(this.form.value,"hhhhhhhhhhh")
   this.registerS.register(this.form.value).subscribe(res=>{

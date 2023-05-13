@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
 export class LoginComponent implements OnInit {
 loginForm:any
 user:any
-  constructor(private loginService:LoginService,private router:Router,private toastr: ToastrService) { }
+  constructor(private loginService:LoginService,private router:Router) { }
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -27,12 +27,15 @@ user:any
     console.log(res.user.role,"results")
       localStorage.setItem("role",res.user.role)
       localStorage.setItem("id",res.user.id)
+      localStorage.setItem("nom",res.user.nom)
+      localStorage.setItem("prenom",res.user.prenom)
+
       if(res.user.role==0){
         this.router.navigate(["/homeAdmin"])
 
       }
        if(res.user.role==1){
-        this.router.navigate(["/homeUser"])
+        this.router.navigate(["/homeUser/voiture"])
 
       }
       if(res.user.role==2){
@@ -47,5 +50,10 @@ user:any
   goRegister(){
     this.router.navigate(["/register"])
   }
+  goContact(){
+    this.router.navigate(["/home"])
 
+  }
+  goLogin(){
+  }
 }

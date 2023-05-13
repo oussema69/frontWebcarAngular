@@ -1,0 +1,69 @@
+<div class="row" style="margin-top:3%;">
+  <div class="col-md-4">
+    <button class="btn btn-primary" (click)="goAdd()">+Ajouter Une Reclamation</button>
+  </div>
+  <div class="col-md-8">
+    <div class="form-group has-search">
+      <input type="text" class="form-control" placeholder="Rechercher" [(ngModel)]="searchText">
+    </div>
+
+  </div>
+</div>
+<table class="table table-striped" style="margin-top:3%;">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">desinstallation</th>
+      <th scope="col">reinstallation</th>
+      <th scope="col">nouvelinstallation</th>
+      <th scope="col">repartition</th>
+      <th scope="col">option</th>
+      <th scope="col">sim</th>
+      <th scope="col">traité</th>
+      <th scope="col">car_id</th>
+      <th scope="col">Intervention</th>
+      <th scope="col">action</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let rec of recs|reclamation:searchText">
+      <td >{{ rec.id}}</td>
+      <td [ngStyle]="{ color: rec.desinstallation ? 'green' : 'red' }">
+        {{ rec.desinstallation ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.reinstallation ? 'green' : 'red' }">
+        {{ rec.reinstallation ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.nouvelinstallation ? 'green' : 'red' }">
+        {{ rec.nouvelinstallation ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.repartition ? 'green' : 'red' }">
+        {{ rec.repartition ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.option ? 'green' : 'red' }">
+        {{ rec.option ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.sim ? 'green' : 'red' }">
+        {{ rec.sim ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.isValid ? 'green' : 'red' }">
+        {{ rec.isValid ? "oui" : "non" }}
+      </td>
+      <td>{{ rec.car_id }}</td>
+      <td><button class="btn btn-primary" (click)="goToInterv(rec.id)">Consulter</button></td>
+      <td>
+        <i
+          class="fa-sharp fa-solid fa-pencil"
+          style="color: green"
+          (click)="update(rec.id)"
+        ></i
+        ><i
+          class="fa-sharp fa-solid fa-trash"
+          style="color: red; margin-left: 3%"
+          (click)="delete(rec.id)"
+        ></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

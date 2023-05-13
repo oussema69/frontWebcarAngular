@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center align-items-center" style="margin-top: 3%;">
+  <div class="input-group rounded">
+    <input type="text" class="form-control " [(ngModel)]="searchText" placeholder="Rechercher" >
+    <div class="input-group-append">
+
+    </div>
+  </div>
+</div>
+
+
+<table class="table table-striped" >
+  <thead>
+    <tr>
+      <th scope="col">nom</th>
+      <th scope="col">prenom</th>
+      <th scope="col">email</th>
+      <th scope="col">tel</th>
+      <th scope="col">list reclamations</th>
+      <th scope="col">list voitures</th>
+      <th scope="col">action</th>
+
+
+
+    </tr>
+  </thead>
+
+  <tbody >
+    <tr *ngFor="let user of users|tech:searchText">
+      <td>{{ user.nom }}</td>
+      <td>{{ user.prenom }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.tel }}</td>
+      <td><button class="btn btn-primary" (click)="gorec(user.id)">consulter</button></td>
+      <td><button class="btn btn-primary" (click)="gocar(user.id)">consulter</button></td>
+      <td><i class="fa-sharp fa-solid fa-pencil" style="color:green" (click)="update(user.id)" ></i><i class="fa-sharp fa-solid fa-trash" style="color:red;margin-left: 3%;" (click)="delete(user.id)"></i></td>
+
+
+  </tbody>
+</table>
+<!--modal code-->

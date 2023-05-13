@@ -1,0 +1,73 @@
+<h1 class="text-center">Client Reclamation</h1>
+<div class="d-flex justify-content-center align-items-center" style="margin-top: 3%;">
+  <div class="input-group rounded">
+    <input type="text" class="form-control " [(ngModel)]="searchText" placeholder="Rechercher" >
+    <div class="input-group-append">
+
+    </div>
+  </div>
+</div>
+
+
+<table class="table table-striped" >
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">desinstallation</th>
+      <th scope="col">reinstallation</th>
+      <th scope="col">nouvelinstallation</th>
+      <th scope="col">repartition</th>
+      <th scope="col">option</th>
+      <th scope="col">sim</th>
+      <th scope="col">traité</th>
+      <th scope="col">car_id</th>
+      <th scope="col">Intervention</th>
+
+
+      <th scope="col">action</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let rec of recs|reclamation:searchText">
+      <td >
+{{ rec.id }}
+      </td>
+      <td [ngStyle]="{ color: rec.desinstallation ? 'green' : 'red' }">
+        {{ rec.desinstallation ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.reinstallation ? 'green' : 'red' }">
+        {{ rec.reinstallation ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.nouvelinstallation ? 'green' : 'red' }">
+        {{ rec.nouvelinstallation ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.repartition ? 'green' : 'red' }">
+        {{ rec.repartition ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.option ? 'green' : 'red' }">
+        {{ rec.option ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.sim ? 'green' : 'red' }">
+        {{ rec.sim ? "choisit" : "non choisit" }}
+      </td>
+      <td [ngStyle]="{ color: rec.isValid ? 'green' : 'red' }">
+        {{ rec.isValid ? "oui" : "non" }}
+      </td>
+      <td>{{ rec.car_id }}</td>
+      <td>
+        <button (click)="goInter(rec.id)" class="btn btn-primary">Consulter</button>
+
+        </td>
+      <td>
+      <i
+          class="fa-sharp fa-solid fa-trash"
+          style="color: red; margin-left: 3%"
+          (click)="delete(rec.id)"
+        ></i>
+      </td>
+
+
+    </tr>
+  </tbody>
+</table>
+

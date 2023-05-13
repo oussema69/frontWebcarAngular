@@ -1,0 +1,190 @@
+<div class="receipt-content">
+  <div class="container bootstrap snippets bootdey">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="invoice-wrapper">
+        <div class="intro">
+           <strong>Intervention</strong>
+        </div>
+
+
+        <div class="payment-details">
+          <div class="row">
+            <div class="col-sm-6">
+              <span>Alimentation:</span>
+                <span class="list-group-item" style="color:black"*ngFor="let inter of alimentation">{{ inter.value }}</span>
+
+            </div>
+            <div class="col-sm-6 text-right">
+              <span>GPS</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of gps">{{ inter.value }}</span>
+
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div class="payment-details">
+          <div class="row">
+            <div class="col-sm-6">
+              <span>GSM</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of gsm">{{ inter.value }}</span>
+
+            </div>
+            <div class="col-sm-6 text-right">
+              <span>SIM</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of sim">{{ inter.value }}</span>
+
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div class="payment-details">
+          <div class="row">
+            <div class="col-sm-6">
+              <span>Configuration & Mise en marche</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of conf">{{ inter.value }}</span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--diagnostic-->
+<div class="receipt-content">
+  <div class="container bootstrap snippets bootdey">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="invoice-wrapper">
+        <div class="intro">
+           <strong>Diagnostic</strong>
+        </div>
+
+
+        <div class="payment-details">
+          <div class="row">
+            <div class="col-sm-6">
+              <span>Alimentation:</span>
+                <span class="list-group-item" style="color:black"*ngFor="let inter of Diagalimentation">{{ inter.value }}</span>
+
+            </div>
+            <div class="col-sm-6 text-right">
+              <span>GPS</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of Diaggps">{{ inter.value }}</span>
+
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div class="payment-details">
+          <div class="row">
+            <div class="col-sm-6">
+              <span>GSM</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of Diaggsm">{{ inter.value }}</span>
+
+            </div>
+            <div class="col-sm-6 text-right">
+              <span>SIM</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of Diagsim">{{ inter.value }}</span>
+
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div class="payment-details">
+          <div class="row">
+            <div class="col-sm-6">
+              <span>Configuration & Mise en marche</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of Diagconf">{{ inter.value }}</span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--option-->
+<div class="receipt-content">
+  <div class="container bootstrap snippets bootdey">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="invoice-wrapper">
+        <div class="intro">
+           <strong>Option</strong>
+        </div>
+
+
+        <div class="payment-details">
+          <div class="row">
+            <div class="col-sm-6">
+              <span>Anti Demarrage:</span>
+                <span class="list-group-item" style="color:black"*ngFor="let inter of anti">{{ inter.value }}</span>
+
+            </div>
+            <div class="col-sm-6 text-right">
+              <span>Sonede Temp</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of sonede">{{ inter.value }}</span>
+
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div class="payment-details">
+          <div class="row">
+            <div class="col-sm-6">
+              <span>Batterie</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of bat">{{ inter.value }}</span>
+
+            </div>
+            <div class="col-sm-6">
+              <span>Can</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of can">{{ inter.value }}</span>
+
+            </div>
+
+          </div>
+        </div>
+        <!---->
+        <div class="payment-details">
+          <div class="row">
+
+            <div class="col-sm-6 text-right">
+              <span>Carburant</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of car">{{ inter.value }}</span>
+
+            </div>
+
+            <div class="col-sm-6">
+              <span>Badge+Lecteur</span>
+              <span class="list-group-item" style="color:black"*ngFor="let inter of badge">{{ inter.value }}</span>
+            </div>
+
+          </div>
+        </div>
+            <!---->
+            <div class="payment-details">
+              <div class="row">
+
+                <div class="col-sm-6">
+                  <span>Autre</span>
+                  <span class="list-group-item" style="color:black"*ngFor="let inter of autre">{{ inter.value }}</span>
+
+                </div>
+                <div class="col-sm-6">
+                  <span>Element De Facturation</span>
+                  <span class="list-group-item" style="color:black"*ngFor="let inter of el">{{ inter.value }}</span>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

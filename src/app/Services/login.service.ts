@@ -16,5 +16,8 @@ register(data:any){
   return this.http.post(this.url+"register", data);
 
 }
+contact(data:any){
+  return this.http.post(this.url+"contact/create",data)
+}
 
 }

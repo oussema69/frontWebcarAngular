@@ -1,0 +1,41 @@
+<div class="row" style="margin-top:3%;">
+  <div class="col-md-4">
+    <button class="btn btn-primary" (click)="goAdd()">+Ajouter Un Technicien</button>
+  </div>
+  <div class="col-md-8">
+    <div class="form-group has-search">
+      <input type="text" class="form-control" placeholder="Rechercher" [(ngModel)]="searchText">
+    </div>
+
+  </div>
+</div>
+<table class="table table-striped" style="margin-top:3%;">
+
+  <thead>
+    <tr>
+      <th scope="col">nom</th>
+      <th scope="col">prenom</th>
+      <th scope="col">email</th>
+      <th scope="col">tel</th>
+      <th scope="col">Reclamation Liste</th>
+      <th scope="col">action</th>
+
+
+    </tr>
+  </thead>
+
+  <tbody >
+    <tr *ngFor="let user of users|tech:searchText">
+      <td>{{ user.nom }}</td>
+      <td>{{ user.prenom }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.tel }}</td>
+      <td><button class="btn btn-primary" (click)="goRec(user.id)">consulter</button></td>
+
+      <td><i class="fa-sharp fa-solid fa-pencil" style="color:green" (click)="update(user.id)" ></i><i class="fa-sharp fa-solid fa-trash" style="color:red;margin-left: 3%;" (click)="delete(user.id)"></i></td>
+
+    </tr>
+  </tbody>
+</table>
+<!--modal code-->
+<button class="btn btn-primary" (click)="goAdd()">Ajouter Un Technicien</button>

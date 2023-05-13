@@ -1,0 +1,16 @@
+<h1>Ajouter Un Technicien</h1>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="formGroupExampleInput">matricule</label>
+    <input type="text" class="form-control" id="formGroupExampleInput"  name="matricule" formControlName="matricule">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">model</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2"  name="model" formControlName="model">
+  </div>
+
+  <input type="hidden"  name="user_id" formControlName="user_id">
+  <input type="submit" value="ajouter" class="btn btn-primary" />
+</form>
+
