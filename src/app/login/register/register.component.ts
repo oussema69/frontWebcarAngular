@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
     Swal.fire({title: 'welcome you are registred now', icon: "success"})
     this.router.navigate(["/login"])
   } , error => {
-    console.log(error.error.error.message);
+    console.log(error);
     Swal.fire({title: error.error.error.message, icon: "error"})
 
 

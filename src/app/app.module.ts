@@ -74,6 +74,8 @@ import { ContactPipe } from './pipes/contact.pipe';
     HttpClientModule,
     BrowserAnimationsModule,
     CommonModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,6 +13,7 @@ export class UserHomeComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+
     this.nom=localStorage.getItem("nom")
     this.prenom=localStorage.getItem("prenom")
   }

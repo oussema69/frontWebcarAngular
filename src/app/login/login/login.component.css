@@ -13,7 +13,7 @@ body {
 .sidenav {
   height: 100%;
   background-color: #000;
-  background-image: url("src/assets/car.avif") ;
+  background-image: url('../../../assets/carlogin.jpg') ;
   overflow-x: hidden;
   padding-top: 20px;
   background-repeat: no-repeat;
